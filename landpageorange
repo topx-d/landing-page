@@ -16,27 +16,29 @@ const App = () => {
   const primaryHover = "hover:bg-[#E64600]";
   const secondaryBg = "bg-slate-950";
 
-  // --- 1. UPDATED BRAINDEV ICON ---
-  // A clean, geometric fusion of a neural node and a coffee bean
+  // --- 1. UPDATED BRAINDEV ICON: COFFEE BEAN INTEGRATION ---
   const MainIcon = ({ className }) => (
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-      <rect width="40" height="40" rx="10" fill="currentColor" fillOpacity="0.05" />
+      <rect width="40" height="40" rx="12" fill="currentColor" fillOpacity="0.1" />
+      {/* Coffee Bean Outer Shape - Organic and slanted */}
       <path 
-        d="M20 8C15.5 8 11.5 11.5 10.5 16C9.5 20.5 12.5 25 17 26.5V32H23V26.5C27.5 25 30.5 20.5 29.5 16C28.5 11.5 24.5 8 20 8Z" 
+        d="M20 10C14.477 10 10 14.477 10 20C10 25.523 14.477 30 20 30C25.523 30 30 25.523 30 20C30 14.477 25.523 10 20 10Z" 
         stroke="currentColor" 
         strokeWidth="2.5" 
-        strokeLinecap="round" 
-        strokeLinejoin="round" 
       />
+      {/* The Central Coffee Bean Crease - Stylized as a neural spark pathway */}
       <path 
-        d="M16 14C16 14 18 13 20 13C22 13 24 14 24 14" 
+        d="M15 22C17 25 23 15 25 18" 
         stroke="currentColor" 
         strokeWidth="2" 
         strokeLinecap="round" 
+        strokeLinejoin="round"
       />
-      <circle cx="20" cy="20" r="2" fill="currentColor">
+      {/* Spark node - The "Dev" brain element */}
+      <circle cx="21" cy="18" r="1.5" fill="currentColor">
         <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
       </circle>
+      <path d="M20 30V34" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 
@@ -167,47 +169,46 @@ const App = () => {
             </div>
           </div>
 
-          {/* --- 2. CLEAN BENTO GRID --- */}
+          {/* Bento Grid */}
           <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 aspect-square md:aspect-auto">
-              {/* Feature 1: Strategic Planning */}
+              
               <div className="col-span-2 row-span-2 bg-slate-50 border border-slate-100 rounded-[40px] p-8 flex flex-col justify-between group hover:border-[#FF4F00]/30 transition-all duration-500">
                 <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#FF4F00] group-hover:scale-110 transition-transform duration-500">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-black uppercase italic tracking-tighter text-slate-900 leading-none">Design First</h4>
-                  <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-2">Spatial Intelligence</p>
+                  <h4 className="text-2xl font-black uppercase italic tracking-tighter text-slate-900 leading-none">Process Driven</h4>
+                  <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-2">Operational Precision</p>
                 </div>
               </div>
 
-              {/* Feature 2: High ROI */}
+              {/* --- 2. UPDATED: CHANGE HIGH ROI TO SCALABLE MODELS --- */}
               <div className="col-span-2 row-span-1 bg-slate-950 rounded-[40px] p-8 flex items-center gap-6 group hover:bg-black transition-colors">
                 <div className="text-orange-500 animate-pulse">
                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
                 </div>
                 <div>
-                  <h4 className="text-white text-xl font-black uppercase italic tracking-tighter">High ROI</h4>
-                  <p className="text-slate-500 text-[9px] font-black uppercase tracking-[0.2em]">Efficiency Driven</p>
+                  <h4 className="text-white text-xl font-black uppercase italic tracking-tighter">Scalable Models</h4>
+                  <p className="text-slate-500 text-[9px] font-black uppercase tracking-[0.2em]">Growth Centric</p>
                 </div>
               </div>
 
-              {/* Feature 3: Success Stat */}
+              {/* --- 3. UPDATED: CHANGE 50+ TO 20+ --- */}
               <div className={`col-span-1 row-span-1 ${primaryBg} rounded-[40px] p-6 flex flex-col items-center justify-center text-center group hover:scale-[1.02] transition-transform`}>
-                <span className="text-3xl font-black text-white italic">50+</span>
+                <span className="text-3xl font-black text-white italic">20+</span>
                 <span className="text-[8px] font-black text-white/80 uppercase tracking-widest mt-1">Openings</span>
               </div>
 
-              {/* Feature 4: Training Icon */}
               <div className="col-span-1 row-span-1 bg-slate-100 rounded-[40px] flex items-center justify-center group">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4F00" strokeWidth="2" className="group-hover:rotate-12 transition-transform duration-500">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
                 </svg>
               </div>
 
-              {/* Feature 5: Wide Brand Showcase */}
               <div className="col-span-2 row-span-1 rounded-[40px] overflow-hidden relative group">
                 <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Portfolio" />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -215,7 +216,6 @@ const App = () => {
                 </div>
               </div>
 
-              {/* Feature 6: Bottom CTA Node */}
               <div className="col-span-2 row-span-1 border-2 border-slate-100 rounded-[40px] p-8 flex items-center justify-between group hover:border-[#FF4F00] transition-colors">
                 <div className="space-y-1">
                   <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Operational Hub</p>
@@ -390,7 +390,7 @@ const App = () => {
       <section id="portfolio" className="py-24 bg-white border-y border-slate-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 mb-12">
            <div className="text-center">
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Trusted by 50+ Entrepreneurs Across Indonesia</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Trusted by 20+ Entrepreneurs Across Indonesia</p>
            </div>
         </div>
         
@@ -423,7 +423,7 @@ const App = () => {
                   Get the Coffee Shop <br/> <span className={primaryColor}>Setup Checklist.</span>
                 </h3>
                 <p className="text-slate-400 font-medium text-lg">
-                  Avoid costly mistakes. Download our verified blueprint used by over 50 successful founders to launch their specialty shops.
+                  Avoid costly mistakes. Download our verified blueprint used by over 20 successful founders to launch their specialty shops.
                 </p>
               </div>
               <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
